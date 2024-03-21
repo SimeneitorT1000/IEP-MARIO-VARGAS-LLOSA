@@ -16,7 +16,7 @@ class segundoNodal extends HTMLElement {
 </head>
         <body>
             <!-- Título -->
-            <button id="close-modal" class="close" style="float: right;">X</button>
+            <button id="btn-cerrar-modal" class="close" style="float: right;">X</button>
             <h1 class="title">Visualizador de PDF</h1>
             <!-- title -->
             <object class="pdfview" type="application/pdf" data="file:///C:/Users/SimeneitorT800/Downloads/html5up-prologue/assets/pdfs/reglamentoInterno2023.pdf"></object>

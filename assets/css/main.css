@@ -2038,6 +2038,8 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+
+
 /* Header  COLOR MENU*/
 
 	#header {
@@ -2187,6 +2189,7 @@ input, select, textarea {
 					}
 
 /* Footer */
+
 
 	#footer {
 		margin-left: 375px;
@@ -2486,6 +2489,8 @@ input, select, textarea {
 					margin-top: 2em;
 					position: relative;
 				}
+			
+
 
 			#logo {
 				margin: 1.5em 1.25em 1.25em 1.25em;

@@ -198,81 +198,75 @@
         </div>
     </section>
 
-   <!-- PDF Section -->
+<!-- PDF Section -->
 <section id="pdfs" class="four">
-    <div class="container">
-        <header>
-			<div style=" padding-top: 2em;">
-                <button class="buttonModal" style="
-                    background-color: #0782a9;
-                    height: 6em;
-                width: 12em;
-                   
-                    "><p style=" display: flex; 
-                    justify-content: center; 
-                    align-items: center;
-                    font-size: 26px;">Plan Curricular</p>
-					<dialog  id="modal"><primer-nodal></primer-nodal></dialog>
-					
-				</button>
-			 
-            </div>
-				
-            <div style=" padding-top: 2em;">
-                <button class="buttonModal" style="
-                background-color: #0782a9;
-                height: 6em;
-                width: 12em;
-               
-                "><p style=" display: flex; 
-                justify-content: center; 
-                align-items: center;
-                font-size: 26px;">Reglamento Interno</p>
-					<dialog  id="modal"><segundo-nodal></segundo-nodal></dialog>
-					
-				</button>
-
-            </div>
-
-            <!-- <div style=" padding-top: 2em;">
-                <button class="buttonModal" style="
-                background-color: #0782a9;
-                height: 4em;
-                width: 3em;
-               
-                "><p style=" display: flex; 
-                justify-content: center; 
-                align-items: center;">Calendario Escolar</p>
-					<dialog  id="modal"><segundo-nodal></segundo-nodal></dialog>
-					
-				</button>
-
-            </div> -->
-
-            <div style=" padding-top: 2em;">
-                <button class="buttonModal" style="
-                background-color: #0782a9;
-                height: 6em;
-                width: 12em;
-               
-               
-                "><p style=" display: flex; 
-                justify-content: center; 
-                align-items: center;
-                font-size: 26px;
-               ">Resolución de Ugel</p>
-					<dialog  id="modal"><segundo-nodal></segundo-nodal></dialog>
-					
-				</button>
-
-            </div>
-
-        </header>
-        <div class="pdf-viewers">
-            <!-- Contenedor para cada visor de PDF -->
-        </div>
+    <div class="container" style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 100%;">
+        
+        <!-- Botones y Diálogos Modales -->
+        <!-- Botón 1 y Modal 1 -->
+        <button class="btn-abrir-modal" style="background-color: #0782a9; height: 6em; width: 12em; margin: 20px;">Plan Curricular 1</button>
+        <dialog class="modal" style="display: none; z-index: 1000; width: 75%; height: auto; padding: 20px; border: none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); background-color: white; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <button class="btn-cerrar-modal" style="float: right;">X</button>
+            
+            <object class="pdfview" type="application/pdf" data="./assets/pdfs/reglamentoInterno2023.pdf" 
+            style="
+            margin: auto;
+            display: block;
+            width: 980px;
+            height: 90vh;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    "></object>
+        </dialog>
+        
+        <!-- Repite para los otros botones y modales -->
+        <button class="btn-abrir-modal" style="background-color: #0782a9; height: 6em; width: 12em; margin: 20px;">Plan Curricular 2</button>
+        <dialog class="modal" style="display: none; z-index: 1000; width: 75%; height: auto; padding: 20px; border: none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); background-color: white; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <button class="btn-cerrar-modal" style="float: right;">X</button>
+            Contenido del Modal 2
+        </dialog>
+        <button class="btn-abrir-modal" style="background-color: #0782a9; height: 6em; width: 12em; margin: 20px;">Plan Curricular 3</button>
+        <dialog class="modal" style="display: none; z-index: 1000; width: 75%; height: auto; padding: 20px; border: none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); background-color: white; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <button class="btn-cerrar-modal" style="float: right;">X</button>
+            Contenido del Modal 3
+        </dialog>
+        <!-- ... -->
     </div>
 </section>
+
+<style>
+@media (max-width: 768px) {
+    /* Tablet */
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .modal {
+        width: 75%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile */
+    .container {
+        flex-direction: column;
+    }
+    .modal {
+        width: 75%;
+        height: 75%;
+    }
+}
+</style>
+
+
 <!-- uniforme section-->
 
 <section id="uniforme" class="seven">
@@ -341,6 +335,7 @@
 </div>
 
 <!-- Scripts -->
+<script src="assets/js/pdf.js"></script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
