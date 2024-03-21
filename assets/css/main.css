@@ -1987,7 +1987,7 @@ input, select, textarea {
 /* Item */
 
 	.item {
-		box-shadow: 0 0.05em 0.15em 0 rgba(97, 245, 6, 0.939);
+		box-shadow: 0 0.05em 0.15em 0 rgba(255,199,0,255);
 		margin-bottom: 40px;
 	}
 
