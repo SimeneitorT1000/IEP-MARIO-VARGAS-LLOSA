@@ -15,6 +15,8 @@
     <script src="./nodal2.js"></script>
     <script src="./nodal3.js"></script>
     <script src="./nodal4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js"></script>
+
 </head>
 <body class="is-preload">
 
@@ -198,25 +200,26 @@
         </div>
     </section>
 
-<!-- PDF SECTION CARRUSEL  ----------------------------------------------------------------------------->
+<!-- PDF SECTION acordion  ----------------------------------------------------------------------------->
 
 <h2>Sección Desplegable</h2>
 
 <button class="accordion">Subtítulo 1</button>
 <div class="panel">
-    <iframe class="pdfview" src="./assets/pdfs/reglamentoInterno2023.pdf" style="border: none; width: 100%; height: 90vh;"></iframe>
- <!-- Contenido vacío para llenar -->
+  <iframe class="pdfview" src="./assets/pdfs/reglamentoInterno2023.pdf"></iframe>
 </div>
 
 <button class="accordion">Subtítulo 2</button>
 <div class="panel">
-    <iframe class="pdfview" src="./assets/pdfs/reglamentoInterno2023.pdf" style="border: none; width: 100%; height: 90vh;"></iframe> <!-- Contenido vacío para llenar -->
+  <iframe class="pdfview" src="./assets/pdfs/reglamentoInterno2023.pdf"></iframe>
 </div>
 
 <button class="accordion">Subtítulo 3</button>
 <div class="panel">
-    <iframe class="pdfview" src="./assets/pdfs/reglamentoInterno2023.pdf" style="border: none; width: 100%; height: 90vh;"></iframe> <!-- Contenido vacío para llenar -->
+  <iframe class="pdfview" src="./assets/pdfs/reglamentoInterno2023.pdf"></iframe>
 </div>
+
+
 
 
 <!-- PDF Section  1-->
@@ -401,7 +404,39 @@
         } 
       });
     }
+
+     // Carga de los documentos PDF
+     var url1 = 'assets/pdfs/reglamentoInterno2023.pdf';
+        var url2 = './assets/pdfs/manualUsuario2023.pdf';
+        var url3 = './assets/pdfs/codigoEtica2023.pdf';
+      
+        // Función para cargar y mostrar un PDF
+        function loadPDF(url, canvasID) {
+          pdfjsLib.getDocument(url).promise.then(function(pdf) {
+            pdf.getPage(1).then(function(page) {
+              var scale = 1.5;
+              var viewport = page.getViewport({scale: scale});
+              var canvas = document.getElementById(canvasID);
+              var context = canvas.getContext('2d');
+              canvas.height = viewport.height;
+              canvas.width = viewport.width;
+      
+              // Renderiza la página
+              var renderContext = {
+                canvasContext: context,
+                viewport: viewport
+              };
+              page.render(renderContext);
+            });
+          });
+        }
+      
+        // Eventos para cada botón acordeón
+        document.getElementsByClassName("accordion")[0].onclick = function() { loadPDF(url1, 'pdf-canvas1'); };
+        document.getElementsByClassName("accordion")[1].onclick = function() { loadPDF(url2, 'pdf-canvas2'); };
+        document.getElementsByClassName("accordion")[2].onclick = function() { loadPDF(url3, 'pdf-canvas3'); };
     </script>
+    
     
 
 <!-- sCRIPTS PDF
