@@ -2188,6 +2188,52 @@ input, select, textarea {
 						color: #cbce14;
 					}
 
+
+					/* Estilos base para dispositivos móviles */
+#pdfs .container {
+    width: 90%;
+    padding: 10px;
+}
+
+#pdfs .btn-abrir-modal {
+    width: 90%;
+    margin: 10px auto;
+}
+
+#pdfs .modal {
+    width: 90%;
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) {
+    #pdfs .container {
+        width: 80%;
+    }
+
+    #pdfs .btn-abrir-modal {
+        width: 70%;
+    }
+
+    #pdfs .modal {
+        width: 70%;
+    }
+}
+
+/* Estilos para escritorios */
+@media (min-width: 1024px) {
+    #pdfs .container {
+        width: 60%;
+    }
+
+    #pdfs .btn-abrir-modal {
+        width: 50%;
+    }
+
+    #pdfs .modal {
+
+        width: 50%;
+	}
+}
 /* Footer */
 
 
