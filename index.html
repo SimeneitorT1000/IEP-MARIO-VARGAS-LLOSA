@@ -198,8 +198,29 @@
         </div>
     </section>
 
-<!-- PDF Section -->
-<section id="pdfs" class="four">
+<!-- PDF SECTION CARRUSEL  ----------------------------------------------------------------------------->
+
+<h2>Sección Desplegable</h2>
+
+<button class="accordion">Subtítulo 1</button>
+<div class="panel">
+    <iframe class="pdfview" src="./assets/pdfs/reglamentoInterno2023.pdf" style="border: none; width: 100%; height: 90vh;"></iframe>
+ <!-- Contenido vacío para llenar -->
+</div>
+
+<button class="accordion">Subtítulo 2</button>
+<div class="panel">
+    <iframe class="pdfview" src="./assets/pdfs/reglamentoInterno2023.pdf" style="border: none; width: 100%; height: 90vh;"></iframe> <!-- Contenido vacío para llenar -->
+</div>
+
+<button class="accordion">Subtítulo 3</button>
+<div class="panel">
+    <iframe class="pdfview" src="./assets/pdfs/reglamentoInterno2023.pdf" style="border: none; width: 100%; height: 90vh;"></iframe> <!-- Contenido vacío para llenar -->
+</div>
+
+
+<!-- PDF Section  1-->
+<!-- <section id="pdfs" class="four">
     <div class="container" style="
         display: flex;
         flex-direction: column;
@@ -209,8 +230,8 @@
         width: 100%;
         height: 100%;">
         
-        <!-- Botones y Diálogos Modales -->
-        <!-- Botón 1 y Modal 1 -->
+        Botones y Diálogos Modales 
+       
         <button class="btn-abrir-modal" style="background-color: #0782a9; height: 6em; width: 12em; margin: 20px;">Plan Curricular 1</button>
         <dialog class="modal" style="display: none; z-index: 1000; width: 65%; height: auto; padding: 20px; border: none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); background-color: rgba(255, 250, 250, 0.246); position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
             <button class="btn-cerrar-modal" style="float: right;">X</button>
@@ -227,7 +248,7 @@
                     "></object>
         </dialog>
         
-        <!-- Repite para los otros botones y modales -->
+      
         <button class="btn-abrir-modal" style="background-color: #0782a9; height: 6em; width: 12em; margin: 20px;">Plan Curricular 2</button>
         <dialog class="modal" style="display: none; z-index: 1000; width: 65%; height: auto; padding: 20px; border: none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); background-color: rgba(255, 250, 250, 0.246); position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
             <button class="btn-cerrar-modal" style="float: right;">X</button>
@@ -248,11 +269,42 @@
         </dialog>
 
 
+                                                    STYLE :
+                                                                        /* Estilos base para dispositivos móviles */
+                                                    #pdfs .container {
+                                                        width: 400px; /* Ajusta al máximo ancho disponible */
+                                                        padding: 10px;
+                                                    }
 
+                                                    #pdfs .btn-abrir-modal {
+                                                        width: 100%; /* Botón a ancho completo */
+                                                        margin: 10px auto;
+                                                    }
 
-        <!-- ... -->
+                                                    #pdfs .modal {
+                                                        width: 100%; /* Modal a ancho completo */
+                                                        height: auto; /* Altura automática para adaptarse al contenido */
+                                                    }
+
+                                                    #pdfs .pdfview {
+                                                        width: 400px; /* Visualizador de PDF a ancho completo */
+                                                        height: auto; /* Altura automática para adaptarse al contenido */
+                                                        max-height: 90vh; /* Altura máxima para evitar desbordamiento vertical */
+                                                    }
+
+                                                    /* Estilos para tablets */
+                                                    @media (min-width: 768px) {
+                                                        /* ... tus estilos para tablet ... */
+                                                    }
+
+                                                    /* Estilos para escritorios */
+                                                    @media (min-width: 1024px) {
+                                                        /* ... tus estilos para escritorio ... */
+                                                    }
+
+        
     </div>
-</section>
+</section> -->
 
 
 
@@ -333,6 +385,24 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+    
 
 <!-- sCRIPTS PDF
 <script>
