@@ -2140,7 +2140,7 @@ input, select, textarea {
 			top: 0;
 		}
 
-	#nav ul {
+	/* #nav ul {
 		list-style: none;
 		padding-left: 0;
 		margin-bottom: 0;
@@ -2167,7 +2167,9 @@ input, select, textarea {
 					position: relative;
 					display: block;
 					font-size: 0.8em;
+					
 				}
+			
 
 					#nav ul li a span:before {
 						position: absolute;
@@ -2186,7 +2188,53 @@ input, select, textarea {
 
 					#nav ul li a.active span:before {
 						color: #cbce14;
-					}
+					} */
+
+					#nav ul {
+						list-style: none;
+		padding-left: 0;
+		margin-bottom: 0;
+					  }
+					  
+					  #nav li {
+						
+						display: block;
+				padding: 0.5em 1.5em 0.5em 1.5em;
+				color: rgba(255,199,0,255);
+				text-decoration: none;
+				outline: 0;
+				border: 0;
+				-moz-transition: none;
+				-webkit-transition: none;
+				-ms-transition: none;
+				transition: none;
+					  }
+					  
+					  #nav a {
+						text-decoration: none;
+						color: #333; /* Cambia el color del texto según tu diseño */
+						padding: 10px; /* Ajusta el padding para separar el texto de los iconos */
+						display: flex;
+						align-items: center;
+					  }
+					  
+					  #nav i {
+						margin-right: 8px; /* Espacio entre el icono y el texto */
+					  }
+					  
+					  /* Estilos para la responsividad en tablets y celulares */
+					  @media (max-width: 768px) {
+						#nav li {
+						  display: block;
+						  margin-right: 0;
+						}
+					  }
+					  
+					  /* Transición suave para el hover */
+					  #nav a:hover {
+						transform: translateX(5px);
+						transition: transform 0.3s ease;
+					  }
 
 /* ACORDION PDF */
 .accordion {
