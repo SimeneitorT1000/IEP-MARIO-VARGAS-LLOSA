@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/57b3b8103a.js" crossorigin="anonymous"></script>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.2.0/uicons-solid-straight/css/uicons-solid-straight.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <li rel="icon" href="images/favicon.ico"></li>
+    <link rel="stylesheet" href="images/favicon.ico">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
@@ -33,9 +33,10 @@
 
         <!-- Logo -->
         <div id="logo" style="font-size: 21px;">
-            <span class="image avatar48"><img src="images/logo.png" alt="" /></span>
+            <span class="image avatar48">
+            <img src="images/logo.png" alt="" /></span>
             <h1 id="title">Sistema BAF</h1>
-            <p style="font-size: large;">I.E.P Mario Vargas Llosa</p>
+            <p style="font-size: medium;">I.E.P Mario Vargas Llosa</p>
         </div>
 
         <!-- Nav -->
@@ -56,7 +57,7 @@
             <ul>
                 <li><a href="#top" id="top-link"><i class="fa-solid fa-house"></i>Inicio</a></li>
                 <li><a href="#portfolio" id="portfolio-link"><i class="fa-regular fa-newspaper"></i>Boletín</a></li>
-                <li><a href="#about" id="about-link"><i class="fa-solid fa-users-rectangle"></i>Sobre Nosotros</a></li>
+                <li><a href="#about" id="about-link"><i class="fa-solid fa-users-rectangle"></i>Nosotros</a></li>
                 <li><a href="#pdfs" id="calendario-link"><i class="fa-solid fa-file-pdf"></i>Documentación</a></li>
                 <li><a href="#uniforme" id="uniforme-link"><i class="fa-solid fa-shirt"></i>Uniforme</a></li>
                 <li><a href="#galery" id="calendario-link" id="uniforme-link"><i class="fa-regular fa-images"></i>Galería</a></li>
@@ -265,19 +266,19 @@
 
 <!-- PDF SECTION acordion  ----------------------------------------------------------------------------->
 <section id="pdfs">
-    <h2>Sección Desplegable</h2>
+    <h2>Normativas Institucionales y Planificación Educativa</h2>
 
-<button class="accordion">REGLAMENTO INTERNO</button>
+<button class="accordion" style="background-color: #ffc700;">REGLAMENTO INTERNO</button>
 <div class="panel">
   <iframe class="pdfview" src="./assets/pdfs/reglamentoInterno2023.pdf"></iframe>
 </div>
 
-<button class="accordion">PLAN CURRICULAR</button>
+<button class="accordion" style="background-color: #055dd4;" >PLAN CURRICULAR</button>
 <div class="panel">
   <iframe class="pdfview" src="./assets/pdfs/PLANDEESTUDIOS.pdf"></iframe>
 </div>
 
-<button class="accordion">RESOLUCIÓN DE UGEL</button>
+<button class="accordion" style="background-color: #008e98;">RESOLUCIÓN DE UGEL</button>
 <div class="panel">
   <iframe class="pdfview" src="./assets/pdfs/AUTORIZACIONIEPYDIRECTOR.pdf"></iframe>
 </div>
@@ -524,12 +525,9 @@
     <section id="contact" class="five">
         <div class="container">
             <header>
-                <h2>Contact</h2>
+                <h2>Contactos</h2>
             </header>
-            <p>Elementum sem parturient nulla quam placerat viverra
-                mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-                donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-                orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
+            <p>Ante cualquier duda o consulta, no olvide comunicarse con nosotros a nuestro correo, estaremos encantados de atenderlo.</p>
             <form method="post" action="#">
                 <div class="row">
                     <div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
