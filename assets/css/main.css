@@ -2249,7 +2249,7 @@ input, select, textarea {
 /* ACORDION PDF */
 .accordion {
     background-color: #eee;
-	margin: 25px;
+	margin-top: 25px;
     color: #444;
     cursor: pointer;
     padding: 18px;
