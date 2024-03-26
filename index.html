@@ -37,17 +37,17 @@
         <!-- Nav -->
         <nav id="nav">
             <ul>
-                <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-                <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">DUDA</span></a></li>
-                <li><a href="#about" id="about-link"><span class="icon solid fa-user">Sobre Nosotros</span></a></li>
-                 <li><a href="#pdfs" id="calendario-link"><span class="icon solid fa-envelope">Documentación</span></a></li>
-                <li><a href="#uniforme" id="uniforme-link"><span class="icon solid fa-envelope">Uniforme</span></a> </li>
-                <li><a href="#galery" id="calendario-link"><span class="icon solid fa-envelope">Galería</span></a></li>
+                <li><a href="#top" id="top-link"><span class="fa-solid fa-house">Intro</span></a></li>
+        
+                <li><a href="#portfolio" id="portfolio-link"><span class="fa-regular fa-newspaper">DUDA</span></a></li>
+                <li><a href="#about" id="about-link"><span class="fa-solid fa-users-rectangle">Sobre Nosotros</span></a></li>
+                 <li><a href="#pdfs" id="calendario-link"><span class="fa-solid fa-file-pdf">Documentación</span></a></li>
+                <li><a href="#uniforme" id="uniforme-link"><span class="fa-solid fa-shirt">Uniforme</span></a> </li>
+                <li><a href="#galery" id="calendario-link"><span class="fa-regular fa-images">Galería</span></a></li>
                
-                <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contacos y Referencias</span></a></li>
+                <li><a href="#contact" id="contact-link"><span class="fa-regular fa-envelope">Contacos y Referencias</span></a></li>
             </ul>
         </nav>
-
     </div>
 
     <div class="bottom">
@@ -111,8 +111,18 @@
             #carrusel-contenido {
                 
                 margin: 0 auto;
-                overflow: hidden;
+                overflow-x: auto;
                 text-align: left;
+            }
+            #carrusel-contenido::-webkit-scrollbar {
+                display: none;
+            }
+            .scrolling-buttons-container {
+                display: flex;
+                justify-content: space-between;
+                font-size: 25px;
+                margin-right: 25px;
+                margin-left: 25px;
             }
             .imagenes {
                 margin-left: 10%;
@@ -125,6 +135,28 @@
                 float: left;
                 width: 33.333%;
             }
+
+            .botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .boton {
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #333;
+    color: white;
+    border: none;
+  }
+
+
+
+  #prev { left: 10px; }
+  #next { right: 10px; }
+
+  
+
             @keyframes automatizacion {
                 0%, 30% { margin-left: 0; }
                 35%, 65% { margin-left: -100%; }
@@ -149,22 +181,36 @@
                 }
             }
         </style>
+        
         <div id="carrusel-contenido">
+            <div class="scrolling-buttons-container">
+                <span id="scrolling-button-left">X</span>
+                 <span id="scrolling-button-right">X</span>
+            </div>
             <div id="carrusel-caja">
                 <div class="carrusel-elemento">
-                    <img class="imagenes" src="images/imagen1Cole.jpg">
+                    
+                    <img class="imagenes" src="images/regresoaclase.jpg" alt="imagen 1">
+                   
                 </div>
+                
                 <div class="carrusel-elemento">
-                    <img class="imagenes" src="images/imagen2Cole.jpg">
+                    
+                    <img class="imagenes" src="images/familiainstitu.jpg" alt="imagen 2">
+                    
                 </div>
+                
                 <div class="carrusel-elemento">
-                    <img class="imagenes" src="images/imagen3Cole.jpg">
+                    <img class="imagenes" src="images/ceremoniainicio.jpg" alt="imagen 3">
                 </div>
                 <!-- Repite para más imágenes -->
             </div>
+            
         </div>
-        <h1>Galeria</h1>
-    </section>
+        
+          
+        <!-- <h1>Galeria</h1> -->
+    </section>
 
     <!-- About Me -->
     <section id="about" class="three">
@@ -552,7 +598,8 @@
         document.getElementsByClassName("accordion")[2].onclick = function() { loadPDF(url3, 'pdf-canvas3'); };
     </script>
     
-    
+    <script src="scrollinfo.js"></script> 
+      
 
 <!-- sCRIPTS PDF
 <script>
