@@ -2192,15 +2192,27 @@ input, select, textarea {
 						--color-texto: rgba(255, 199, 0, 1); /* Color amarillo, puedes ajustar según tu diseño */
 						--color-icono: rgb(119,208,144); /* Mismo color que el texto, puedes ajustar según tu diseño */
 					  }
+					  #nav {
+						overflow: hidden; /* Oculta la barra de desplazamiento */
+						/* ... (otros estilos que ya tienes) ... */
+					
+					}
+					
 					  
 					  #nav ul {
+						
+						
 						padding-top: 20%;
 						list-style: none;
 						padding-left: 0;
 						margin-bottom: 0;
+						list-style: none; /* Elimina los puntos de diseño (bullets) */
+						padding-left: 0; /* Asegura que no haya espacio adicional a la izquierda */
+					
 					  }
 					  
 					  #nav li {
+						
 						display: block;
 						padding: 0.5em 1.5em;
 						color: var(--color-texto); /* Utiliza el color definido para el texto */
