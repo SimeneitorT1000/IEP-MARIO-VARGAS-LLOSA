@@ -2081,7 +2081,7 @@ input, select, textarea {
 			-webkit-flex-shrink: 0;
 			-ms-flex-shrink: 0;
 			flex-shrink: 0;
-			padding: 1.5em 0 0.75em 0;
+			padding: .5em  0.5em 0;
 		}
 
 			#header .bottom > :last-child {
@@ -2109,7 +2109,7 @@ input, select, textarea {
 
 	#logo {
 		position: relative;
-		margin: 1.75em 1.5em 1.5em 1.5em;
+		margin: .75em .5em .5em .5em;
 		min-height: 48px;
 		cursor: default;
 	}
@@ -2152,7 +2152,7 @@ input, select, textarea {
 		
 		
 		#nav ul {
-			padding-top: 20%;
+			padding-top: 0%;
 			list-style: none;
 			padding-left: 0;
 			margin-bottom: 0;
@@ -2174,10 +2174,12 @@ input, select, textarea {
 		}
 		
 		#nav a {
+			margin: -9px;
 			text-decoration: none;
 			color: var(--color-texto); /* Utiliza el color definido para el texto */
-			padding: 9px; /* Ajusta el padding para separar el texto de los iconos */
+			padding: 19px; /* Ajusta el padding para separar el texto de los iconos */
 			display: flex;
+			margin-bottom: 5px;
 			align-items: center;
 		}
 		
@@ -2187,7 +2189,19 @@ input, select, textarea {
 		}
 		
 		/* Estilos para la responsividad en tablets y celulares */
-		@media (max-width: 768px) {
+		@media (max-width: 2000px){
+			#nav a {
+				
+				margin-bottom: 2em;
+				
+			}
+		}
+	
+		@media (max-width: 800px) {
+			#nav { 
+				
+				
+			}
 			#nav li {
 				display: block;
 				margin-right: 0;
@@ -2195,6 +2209,12 @@ input, select, textarea {
 				max-height: 50px; /* Altura máxima del menú */
 				overflow: hidden; /* Oculta el contenido que exceda la altura máxima */
 			}
+			#nav a {
+				
+				margin-bottom: 80px;
+				
+			}
+			
 		}
 		
 		/* Transición suave para el hover */
@@ -2676,8 +2696,8 @@ input, select, textarea {
 				#header .bottom {
 					border-top: solid 1px rgba(255, 255, 255, 0.05);
 					box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.15);
-					padding-top: 2em;
-					margin-top: 2em;
+					padding-top: 0em;
+					margin-top: 0em;
 					position: relative;
 				}
 			
