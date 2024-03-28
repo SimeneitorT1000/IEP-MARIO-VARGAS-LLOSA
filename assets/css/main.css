@@ -2199,14 +2199,14 @@ input, select, textarea {
 		@media (max-width: 1640px){
 			#nav a {
 				
-				margin-bottom: 5px;
+				margin-bottom: 1px;
 				
 			}
 		}
 		@media (max-width: 1250px){
 			#nav a {
 				
-				margin-bottom: 2px;
+				margin-bottom: 1px;
 				
 			}
 		}
