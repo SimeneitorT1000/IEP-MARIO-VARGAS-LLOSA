@@ -2226,6 +2226,13 @@ input, select, textarea {
 			}
 			
 		}
+		@media (max-width: 400px){
+			#nav a {
+				
+				margin-bottom: 0px;
+				
+			}
+		}
 		
 		/* Transición suave para el hover */
 		#nav a:hover {
